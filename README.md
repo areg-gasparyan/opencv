@@ -18,11 +18,33 @@ pip3 install numpy <br>
 Often, we have to capture live stream with camera. OpenCV provides a very simple interface to this. Let’s capture a video from the camera (I am using the in-built webcam of my laptop), convert it into grayscale video and display it. Just a simple task to get started.
 
 ## Run
+
+### Display captures
+![capture](https://user-images.githubusercontent.com/63744982/79381761-86ef0780-7f73-11ea-9195-2188ebb54d12.png)
+
+
+Run example which convert it to gray and display camere capture
 python3 camera/capture.py 
 
 For exist just type 'q'
 
 Be sure your camera is working and you provide correct path or ID to camera device in function cv2.VideoCapture("/dev/video0"), also instead of camera path you can provide path to video file.
+
+### Rotation
+![rotation](https://user-images.githubusercontent.com/63744982/79381830-9f5f2200-7f73-11ea-9cbb-e7d1c8c29aad.png)
+
+For real time rotation we use cv2.getRotationMatrix2D(center, angle, scale) function which return transformation matrix than use cv2.warpAffine(frame, rotation_matrix, (width, height)) function to rotate.
+
+python3 camera/rotation.py
+
+### Detect Edges
+![edge](https://user-images.githubusercontent.com/63744982/79381868-aab24d80-7f73-11ea-9104-c3741002f215.png)
+
+For detect edges we use canny method cv2.Canny(image, minVal, maxVal)
+
+python3 camera/edge.py
+
+
 
 
 ## Source
