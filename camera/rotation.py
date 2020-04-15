@@ -21,10 +21,10 @@ while(cap.isOpened()):
     ret, frame = cap.read()
 
     rmatrix = cv2.getRotationMatrix2D( (width / 2, height / 2), 90, .5)
-    frame = cv2.warpAffine(frame, rmatrix, (width, height))
+    r_frame = cv2.warpAffine(frame, rmatrix, (width, height))
 
     # Display the resulting frame
-    cv2.imshow('frame', frame)
+    cv2.imshow('frame', r_frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 

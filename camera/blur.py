@@ -18,11 +18,11 @@ while(cap.isOpened()):
     # Capture frame-by-frame
     ret, frame = cap.read()
 
-    # Detect edges
-    e_frame = cv2.Canny(frame, 100, 200)
+    # Blurring image 
+    b_frame = cv2.GaussianBlur(frame, (13, 13), cv2.BORDER_DEFAULT)
 
     # Display the resulting frame
-    cv2.imshow('frame', e_frame)
+    cv2.imshow('frame', b_frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
