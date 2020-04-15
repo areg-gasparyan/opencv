@@ -17,10 +17,12 @@ pip3 install numpy <br>
 # Capture Video from Camera
 Often, we have to capture live stream with camera. OpenCV provides a very simple interface to this. Let’s capture a video from the camera (I am using the in-built webcam of my laptop), convert it into grayscale video and display it. Just a simple task to get started.
 
-# Run
+## Run
 python3 camera/capture.py 
 
 For exist just type 'q'
+
+Be sure your camera is working and you provide correct path or ID to camera device in function cv2.VideoCapture("/dev/video0"), also instead of camera path you can provide path to video file.
 
 
 ## Source
