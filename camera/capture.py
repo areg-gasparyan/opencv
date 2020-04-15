@@ -5,6 +5,13 @@ import cv2
 # /dev/video0 can be replaced to video file path for example ./test.mp4
 cap = cv2.VideoCapture("/dev/video0")
 
+# Setup camera reading widtth
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+
+# Setup camera reading height
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+
+
 while(True):
     # Capture frame-by-frame
     ret, frame = cap.read()
