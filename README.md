@@ -58,7 +58,13 @@ borderType – pixel extrapolation method, <br>
 
 python3 image_processing/blur.py
 
+### Add stick image
+![stick](https://user-images.githubusercontent.com/63744982/79387897-7cd20680-7f7d-11ea-9f7a-6c138c3b791c.png)
 
+
+In this example given the input image path, which resizing to the small size and put into camera capture.
+
+python3 image_processing/stick_image.py data/images/tux.png
 
 
 ## Sources
