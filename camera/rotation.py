@@ -1,4 +1,4 @@
-# Camera captures
+# Rotate captures
 
 import numpy as np
 import cv2
@@ -7,22 +7,24 @@ import cv2
 # /dev/video0 can be replaced to video file path for example ./test.mp4
 cap = cv2.VideoCapture("/dev/video0")
 
+width = 640; height = 480
+
 # Setup camera reading widtth
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
 
 # Setup camera reading height
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 
 
 while(cap.isOpened()):
     # Capture frame-by-frame
     ret, frame = cap.read()
 
-    # Our operations on the frame come here
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    rmatrix = cv2.getRotationMatrix2D( (width / 2, height / 2), 90, .5)
+    frame = cv2.warpAffine(frame, rmatrix, (width, height))
 
     # Display the resulting frame
-    cv2.imshow('frame',gray)
+    cv2.imshow('frame', frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
