@@ -35,14 +35,14 @@ Be sure your camera is working and you provide correct path or ID to camera devi
 
 For real time rotation we use cv2.getRotationMatrix2D(center, angle, scale) function which return transformation matrix than use cv2.warpAffine(frame, rotation_matrix, (width, height)) function to rotate.
 
-python3 camera/rotation.py
+python3 image_processing/rotation.py
 
 ### Detect Edges
 ![edge](https://user-images.githubusercontent.com/63744982/79381868-aab24d80-7f73-11ea-9104-c3741002f215.png)
 
 For detect edges we use canny method cv2.Canny(image, minVal, maxVal)
 
-python3 camera/edge.py
+python3 image_processing/edge.py
 
 ### Blur
 ![blur](https://user-images.githubusercontent.com/63744982/79383578-7724f280-7f76-11ea-87d5-30f05a6b37ac.png)
@@ -56,10 +56,10 @@ sigmaX – Gaussian kernel standard deviation in X direction,
 sigmaY – Gaussian kernel standard deviation in Y direction, 
 borderType – pixel extrapolation method, <br>
 
-python3 camera/edge.py
+python3 image_processing/blur.py
 
 
 
 
-## Source
+## Sources
 https://opencv-python-tutroals.readthedocs.io/en/latest/index.html
