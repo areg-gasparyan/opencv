@@ -44,6 +44,20 @@ For detect edges we use canny method cv2.Canny(image, minVal, maxVal)
 
 python3 camera/edge.py
 
+### Blur
+![blur](https://user-images.githubusercontent.com/63744982/79383578-7724f280-7f76-11ea-87d5-30f05a6b37ac.png)
+
+Blurs an image using the normalized box filter, cv2.GaussianBlur(src, ksize, sigmaX[, dst[, sigmaY[, borderType]]])  
+
+src – input image, 
+dst – output image, 
+ksize – Gaussian kernel size, 
+sigmaX – Gaussian kernel standard deviation in X direction, 
+sigmaY – Gaussian kernel standard deviation in Y direction, 
+borderType – pixel extrapolation method, <br>
+
+python3 camera/edge.py
+
 
 
 
